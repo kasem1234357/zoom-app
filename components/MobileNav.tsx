@@ -26,7 +26,7 @@ function MobileNav() {
               {sidebarLinks.map((link)=>{
            const isActive = pathname ===link.route 
           return (
-            <SheetClose asChild> 
+            <SheetClose key={link.label} asChild> 
            <Link href={link.route} key={link.label} className={cn('flex gap-4 items-center p-4 rounded-lg w-full max-w-60',isActive?'bg-blue-1':'')}>
             <Image src={link.imgURL} alt={link.label} width={20} height={20} />
             <p className='font-semibold'> {link.label}</p>
